@@ -1,0 +1,42 @@
+.burger-ico{
+    background: url("../images/icons/burgermenu128p.png");
+  
+}
+
+.user-ico{
+    background: url("../images/icons/user.png");
+}
+
+.wallet-ico{
+    background: url("../images/icons/contacticon.png");
+}
+.homee-ico{
+    background: url("../images/icons/homee.png");
+}
+.gallery-ico{
+    background: url("../images/icons/gallery.png");
+}
+.fcb-ico{
+    background: url("../images/icons/facebook1.png");
+}
+.insta-ico{
+    background: url("../images/icons/insta.png");
+}
+.lkd-ico{
+    background: url("../images/icons/linkdin.png");
+}
+.ico{
+    width: 43px;
+    height: 43px;
+    display: inline-block;
+    background-size: cover;
+    vertical-align: middle;
+  
+   
+    
+}
+.ico-l{
+    width: 24px;
+    height: 24px; 
+    
+}

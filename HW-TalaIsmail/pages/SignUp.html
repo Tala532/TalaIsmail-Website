@@ -1,0 +1,129 @@
+
+
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tala's website</title>
+    <link rel="stylesheet" href="cv.css">
+    <link rel="stylesheet" href="../css/mStyle.css">
+        <link rel="stylesheet" href="../css/icons.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    
+</head> 
+
+<body style="background-color:gainsboro">
+    <div class="row center-content" id="header">
+        <div id="dropdown-menu">
+            <span><i style="margin-top: 13px;"  class="ico burger-ico"  ></i></span>
+            
+            <div class="dropdown-content">
+                <ul>
+                    <a href="mainpage.php">
+                        <li><i class="ico ico-l homee-ico"></i> <p style="padding-left: 5px; display: inline;">Home</p> </li>
+                    </a>
+                    
+                    <a href="cv.php">
+                        <li><i class="ico ico-l user-ico"></i> <p style="padding-left: 5px; display: inline;">My CV</p> </li>
+                    </a>
+                    <a href="page2.php">
+                        <li><i class="ico ico-l wallet-ico"></i><p style="padding-left: 5px; display: inline;">Contact me</p></li>
+                    </a>
+                    <a href="page3.php">
+                        <li><i class="ico ico-l gallery-ico"></i><p style="padding-left: 5px; display: inline;">Gallery</p></li>
+                    </a>
+                </ul>
+            </div>
+           
+        </div>
+    </div>
+
+
+
+    <div id="content" style="padding-left: 150px; padding-right: 150px;margin-top: 100px; ">
+
+
+        <section id="work">
+            <div class="work">
+                <h1 id="header_1" style="text-align: center;margin-bottom:10px; color:#505050;font-size: 30px;">
+                    Welcome to my Personal Portfolio!
+                </h1>
+               
+                <div class="inn" style="text-align: center;">
+                    <form action = "../BackEnd/SignUp.php" method = "POST" name="signup-form">
+                  
+                    <label id="fullname" for="fullname" style="color: #505050; font-size: 20px;"> <b>Name</b></label>
+                    <br>
+                    <input style ="border-radius: 10px; border:solid 3px #505050;padding: 14px; font-size: 15px;" type="text" name="fullname" placeholder =" Enter Name" >
+                    <br><br>
+                    <label  id ="birthday" for ="birthday" style="color: #505050; font-size: 18px;" ><b>Enter Birthday</b></label>
+                    <br>
+                    <input style ="border-radius: 10px; border:solid 3px #505050;padding: 14px; color: #505050; margin-top: 5px; font-size: 15px;" type="date" name ="birthday">
+                    <br><br>
+                    <input type="radio" name="sex"  id="r-male" value="m" style="margin: 0;">
+                    <label for="r-male" style="font-size: 19px;color: #505050; margin: 0;">Male</label>
+                    <br>
+                    <input type="radio" name="sex" checked id="r-female" value="f">
+                    <label for="r-female" style="font-size: 19px;color: #505050; ">Female</label>
+                    <br>
+                    <input type="radio" name="sex" id="r-nts" value="f">
+                    <label for="r-nts" style="font-size: 19px;color: #505050;">Prefer Not To Say</label>
+                     <br><br>
+                    <label  id="user" for="username" style="color: #505050; font-size: 20px;" > <b>Username</b></label>
+                    <br>
+                    <input style ="border-radius: 10px; border:solid 3px #505050;padding: 14px; font-size:15px; color: #505050; margin-top: 5px;" type="text" placeholder=" Enter Username" name="username" required>
+                    <br><br>
+                    <label  id="password" for="password" style="color: #505050; font-size: 20px;"> <b>Password</b></label>
+                    <br>
+                    <input style ="border-radius: 10px; border:solid 3px #505050;padding: 14px; font-size:15px; color: #505050; margin-top: 5px;" type="password" placeholder=" Enter Password" name="password" required>
+                    <br>
+                    <input style ="border-radius: 10px; border:solid 3px #505050;padding: 14px; font-size:15px; color: #505050; margin-top: 5px;" type="password" placeholder=" Confirm Password" name="confirmPassword" required>
+                    <br>
+                    <input id="signupBtn" type="button" value ="Sign Up" onclick="SignUp()" style="margin-top: 8px; border-radius: 15px; font-size:20px">
+                    
+                    <input id="clearBtn" type="button" value ="Clear" onclick="ClearForm()" style="margin-top: 8px; border-radius: 15px; font-size: 20px;">
+                    <br>
+                    <p class="login" style="color: #505050; font-weight: bold; font-size:22px">Already have an account? <a style=" text-decoration:none; color: red; " href ="../index.php">Login</a></p>
+                </form>
+                </div>
+                <script>
+                    function SignUp(){
+                        var mForm=document.querySelector("form[name='signup-form']");
+                        var fullname=mForm.elements["fullname"].value;
+                        var username=mForm.elements["username"].value;
+                        var pass=mForm.elements["password"].value;
+                        var confPass=mForm.elements["confirmPassword"].value;
+                        var sex=mForm.elements["sex"].value;
+                        var birthdate=mForm.elements["birthday"].value;
+                       
+                        console.log("fullname:"+fullname);
+                        console.log("username:"+username);
+                        console.log("pass:"+pass);
+                        console.log("sex:"+sex);
+                        console.log("birthday:"+birthdate);
+                
+                        if ((pass!=confPass)||(pass==""))
+                            alert("Passwords must be equal.");
+                        else
+                            mForm.submit();        
+                    }
+                    function ClearForm(){
+                        var mForm=document.querySelector("form[name='signup-form']");
+                        mForm.elements["fullname"].value="";
+                        mForm.elements["username"].value="";
+                        mForm.elements["password"].value="";
+                        mForm.elements["confirmPassword"].value="";
+                        mForm.elements["sex"].value="m";
+                        mForm.elements["birthday"].value="";
+                      
+                    }
+                </script>
+        
+        </section>
+    </div>
+    
+</body>
