@@ -23,7 +23,7 @@ if ($usersArray !== null && is_array($usersArray)) {
         header("Location: ../pages/cv.php");
         exit(); // Terminate the script after header redirect
     } else {
-        header("Location: index.php");
+        header("Location: ../index.php");
         exit(); // Terminate the script after header redirect
     }
 } else {
