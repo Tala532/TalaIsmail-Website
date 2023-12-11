@@ -14,7 +14,7 @@ session_destroy();
     <link rel="stylesheet" href="../css/icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body style="background-color:gainsboro">
+<body style="background-color:#E8E8E8">
 <div class="row center-content" id="header">
         <div id="dropdown-menu">
             <span><i style="margin-top: 13px;"  class="ico burger-ico"  ></i></span>
