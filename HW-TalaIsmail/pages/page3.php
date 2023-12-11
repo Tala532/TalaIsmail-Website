@@ -14,6 +14,39 @@
     <link rel="stylesheet" href="../css/icons.css">
     <link rel="stylesheet" href="cv.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+       
+       #userDiv {
+           font-family: 'Times New Roman', Times, serif;
+           font-size: 35px;
+           color: white;
+           display: flex;
+           align-items: center;
+           margin-top: 10px;
+       
+       }
+
+       #userDiv span {
+           margin-left: 10px; 
+       }
+
+       #logOut {
+           color: dimgray;
+           text-decoration: none;
+           background-color: grey;
+           margin-left: 10px;
+          font-size: 30px;
+           border-radius: 7px;
+           color: red;
+           font-weight: bold;
+           
+       }
+
+       #logOut:hover {
+          
+           transform: scale(1.05   ); 
+       }
+   </style>
 
    
 </head>
@@ -42,6 +75,14 @@
                
             </div>
         
+        </div>
+        <div style="float: right; color: white; font-size: 35px;">
+            <?php
+            if (isset($_SESSION["username"])) {
+                echo '<div id ="userDiv">Welcome, ' . $_SESSION["fullname"] ;
+                echo '<br><a href="/BackEnd/Logout.php" id="logOut">Logout</a></div>';
+            }
+            ?>
         </div>
         
     </div>
